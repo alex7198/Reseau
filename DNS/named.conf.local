@@ -1,0 +1,22 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+zone "agence.toulouse" {
+	type master;
+	file "/etc/bind/db.agence.toulouse";
+};
+
+zone "informatique.agence.toulouse"{
+	type master;
+	file "/etc/bind/db.informatique.agence.toulouse";
+};
+
+zone "3.3.200.in-addr.arpa" {
+	type master;
+	file "/etc/bind/db.agence.toulouse.inv";	
+};
